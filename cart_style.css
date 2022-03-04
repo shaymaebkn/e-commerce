@@ -1,0 +1,16 @@
+main{
+    margin: 20px 250px;
+}
+.cart_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart_list li{
+    list-style: decimal;
+    padding: 5px 50px;
+    border: 1px solid black;
+}
+table{
+    width: 100%;
+}
