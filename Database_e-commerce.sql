@@ -63,11 +63,6 @@ create table Products
    image                varchar(254),
    primary key (productID)
 );
-INSERT INTO Products ( productID , productName,`description`,unitPrice,quantityInStock,`image`) VALUES
-( 'halima', 'allam', '2022-03-21', 'hahaha', '110000','fvthg'),
-( 'shaymae', 'boukhana', '2022-03-24', 'hahaha', '110000', 'ttatat'),
-( 'shaymae', 'boukhana', '2022-03-24', 'hahaha', '110000', 'ttatat', '13.jpg');
-
 
 alter table OrderDetails add constraint FK_Contient foreign key (orderID)
       references Orders (orderID) on delete restrict on update restrict;
