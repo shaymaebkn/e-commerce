@@ -13,13 +13,11 @@
                   <table class="table align-middle">
                       <thead>
                           <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Name</th>
-                            <th scope="col">last name</th>
-                            <th scope="col">Date </th>
-                            <th scope="col">Departement</th>
-                            <th scope="col">Salary</th>
-                            <th scope="col">Function</th>
+                            <th scope="col">id</th>
+                            <th scope="col"> name</th>
+                            <th scope="col">description</th>
+                            <th scope="col">quantite </th>
+                            
 
                             <th scope="col "colspane="2">picture</th>
                             <th scope="col">operations</th>
@@ -28,18 +26,18 @@
                       </thead>
                       <tbody>
                       <?php 
-                                foreach($employe as $data){ 
+                                foreach($product as $data){ 
                     ?>
                           <tr>
-                              <td scope="row"><?php echo $data->id; ?></td>
-                              <td><?php echo $data->first_name; ?></td>
-                              <td><?php echo $data->last_name; ?></td>
-                              <td><?php echo $data->date; ?></td>
-                              <td><?php echo $data->department; ?></td>
-                              <td><?php echo $data->salary; ?></td>
-                              <td><?php echo $data->function; ?></td>
+                              
+                              <td><?php echo $data->productID; ?></td>
+                              <td><?php echo $data->productName; ?></td>
+                              <td><?php echo $data->description; ?></td>
+                              <td><?php echo $data->unitPrice; ?></td>
+                              <td><?php echo $data->quantityInStock; ?></td>
+                             
                               <td>
-                              <img src="<?php echo $data->picture; ?>" alt="this is a employees photo" width="35px" height="35px" style = "border-radius:50% ;"></td>
+                              <img src="<?php echo $data->image; ?>" alt="this is a employees photo" width="35px" height="35px" style = "border-radius:50% ;"></td>
                             <td>
                               <td><a class="text-success" href="edit.php?id=<?php echo $data->id; ?>"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><a onclick="return confirm('are you sure you wanna delete this row?');" class="text-danger" href="delete.php?id=<?php echo $data->id; ?>"><i class="bi bi-trash"></i></a></td>
@@ -72,7 +70,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" >Date:</label>
-                        <input type="date" class="form-control" name="date">
+                        <input type="text" class="form-control" name="date">
 
                     </div>
                     <div class="mb-3">
