@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-    include_once 'connect/connect.php';
-    $id = $_POST['id'];
-    $productID = $_POST['first-name'];
-    $productName = $_POST['last-name'];
-    $description = $_POST['date'];
-    $unitPrice = $_POST['department'];
-    $quantityinstock = $_POST['salary'];
-    $function = $_POST['function'];
-    $pic = $_POST['picture'];
-
-    $statement = $bd->prepare("INSERT INTO `products`(`productID`, `productName`, `description`, `unitPrice`, `quantityInStock`, `image`) VALUES
-                                (?,?,?,?,?,?)");
-    $result = $statement->execute([$first_name,$last_name,$date,$department,$salary,$function,$pic]);
-
-    if ($result === TRUE) {
-        header('Location: form.php?message=registr');
-    } else {
-        header('Location: form.php?message=error');
-        exit();
-    }
-    
-?>
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN-UP</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
 <style>
@@ -73,6 +48,9 @@ footer div{
     text-align: left;
     text-decoration: none;
     color: black;
+}
+.btn{
+    background-color:#FFB3C6;
 }
 
 /* media query */
@@ -131,9 +109,47 @@ footer div{
 </style>
 </head>
 <body>
+<header>
+        <nav class="nav1">
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="nav_links">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li id="catalogue"><a href="#">CATALOGUE</a></li>
+                    <li><a href="#">SIGN-UP</a></li>
+                </ul>
+            </div>
+            <div class="logo" id="logo">
+                <a href="#"><img src="pics/logo.png" alt="paon" width="160px"></a>
+            </div>
+            <div class="icons" mt-2>
+                <a href="#"><img src="pics/search.png"></a>
+                <a href="#"><img src="pics/cart.png"></a>
+                <a href="#"><img src="pics/profil-de-lutilisateur.png"></a>
+            </div>
+        </nav>
+        <nav class="nav2" id="nav2">
+            <ul>
+                <li><a href="#">skin care</a></li>
+                <li><a href="#">make-up</a></li>
+                <li><a href="#">perfume</a></li>
+                <li><a href="#">bath and body</a></li>
+                <li><a href="#">hair</a></li>
+                <li><a href="#">accessories</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
 <form class="container">
-   
+
+  <div class="text-center m-5">
+ <h1>SIGN-UP</h1>
+</div>
 
 <div class="form-row">
 
@@ -164,11 +180,12 @@ footer div{
   </div>
 
   <div class="form-row">
+
   <div class="col">
   <label for="email">EMAIL</label>
   <input type="email" class="form-control" id="email"  >
-    </div>
-</div>
+    </div> 
+    </div>  
   
     <div class="form-row">
 
@@ -186,23 +203,15 @@ footer div{
 
     
    
-    
-
-    
-
-    
-
-   
-
-   
-    
-      <button type="submit" class="btn btn-warning">SIGN up</button>
-  <p>You have an account already? <button>Log in</button></p>
+    <div class="mt-5 text-center">
+      <button type="submit" class="btn">SIGN up</button>
+  <p class="mt-3">You have an account already? <button class="text-primary">Log in</button></p>
   </div>
 
   
 
 </form>
+
 <footer>
         <div class="follow_us">
             <h2>FOLLOW US</h2>
@@ -244,4 +253,3 @@ footer div{
 </body>
 
 </html>
->>>>>>> bff672dcba285ac6fc366e61c3efcc1720307d75
