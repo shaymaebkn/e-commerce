@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="text-center">
-    <h1>SIGN UP</h1></div>
+    <h1 class="m-5">SIGN UP</h1></div>
 <form  class="container">
 <div class="row">
   <div class="col">
@@ -52,9 +52,13 @@
     <input type="password" class="form-control" id="password">
     </div>
     </div>
-  
-  <button type="submit" class="btn">SIGN UP</button>
-  <p>You have an account already? <button>Log in</button></p>
+
 </form>
+
+    <div class="text-center">
+  <button type="submit" class="mt-5 btn btn-outline-danger btn-lg">SIGN UP</button>
+  <p>You have an account already? <a class="mt-2 text-primary">Log in</a></p>
+</div>
+
 </body>
 </html>
