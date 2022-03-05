@@ -35,7 +35,7 @@
        if($result){
          echo 'working';
        }else{
-         echo 'not working';
+         echo 'not workingg';
        }}
   
     ?>
