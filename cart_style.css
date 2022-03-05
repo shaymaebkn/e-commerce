@@ -1,6 +1,9 @@
 main{
     margin: 20px 250px;
 }
+.section1{
+    margin-bottom: 200px;
+}
 .section1 div{
     margin: 30px auto;
 }
@@ -14,6 +17,30 @@ main{
     padding: 5px 50px;
     border: 1px solid black;
 }
-table{
+.table{
     width: 100%;
+}
+.table thead,tbody{
+    border-bottom: 1px solid grey;
+}
+.table thead,tbody th,td{
+    padding: 20px 0px;
+}
+.table tfoot td{
+    border-bottom: none;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+}
+.next{
+    display: flex;
+    justify-content: center;
+}
+.next_button{
+    padding: 10px 40px;
+    background-color: #DAB598;
+    border: none;
+    border-radius: 6px;
+    
 }
