@@ -9,10 +9,13 @@
      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+    <?php
+    include 'headerfooter/header.php';
+    ?>
     <div class="text-center">
     <h1 class="m-5">SIGN UP</h1></div>
 <form  class="container">
-<div class="row">
+<div class="row mb-3">
   <div class="col">
     <label for="firstname" class="form-label">First Name</label>
     <input type="text" class="form-control" id="firstname">
@@ -24,7 +27,7 @@
     </div>
     </div>
 
-    <div class="row">
+    <div class="row mb-3">
     <div class="col">
     <label for="adress" class="form-label">Adress</label>
     <input type="text" class="form-control" id="adress">
@@ -36,12 +39,12 @@
     </div>
     </div>  
 
-    <div class="col">
+    <div class="col mb-3">
     <label for="email" class="form-label">Email</label>
     <input type="email" class="form-control" id="email">
     </div>
 
-    <div class="row">
+    <div class="row mb-3">
     <div class="col">
     <label for="password" class="form-label">Password</label>
     <input type="password" class="form-control" id="password">
@@ -56,9 +59,12 @@
 </form>
 
     <div class="text-center">
-  <button type="submit" class="mt-5 btn btn-outline-danger btn-lg">SIGN UP</button>
-  <p>You have an account already? <a class="mt-2 text-primary">Log in</a></p>
+  <button type="submit" style="background-color:#FFB3C6;" class="mt-5 btn-lg">SIGN UP</button>
+  <p class="mt-2 mb-5">You have an account already? <a href="login.php" class="text-primary">Log in</a></p>
 </div>
 
+<?php
+    include 'headerfooter/footer.php';
+    ?>
 </body>
 </html>
