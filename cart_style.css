@@ -1,6 +1,9 @@
 main{
     margin: 20px 250px;
 }
+.section1 div{
+    margin: 30px auto;
+}
 .cart_list{
     display: flex;
     justify-content: center;

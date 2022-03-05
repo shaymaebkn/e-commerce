@@ -19,13 +19,13 @@
             </div>
             <div class="nav_links">
                 <ul>
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="index.php">HOME</a></li>
                     <li id="catalogue"><a href="#">CATALOGUE</a></li>
-                    <li><a href="#">SIGN-UP</a></li>
+                    <li><a href="signup.php">SIGN-UP</a></li>
                 </ul>
             </div>
             <div class="logo" id="logo">
-                <a href="#"><img src="pics/logo.png" alt="paon" width="160px"></a>
+                <a href="index.php"><img src="pics/logo.png" alt="paon" width="160px"></a>
             </div>
             <div class="icons" mt-2>
                 <a href="#"><img src="pics/search.png"></a>

@@ -8,7 +8,7 @@ include 'headerfooter/header.php';
                     <li>Details</li>
                     <li>Confirmation</li>
             </div>
-            <div>
+            <div class="cart_title">
                 <h1>CART :</h1>
             </div>
             <div class="cart_table">
