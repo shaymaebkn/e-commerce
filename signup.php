@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP</title>
+    
+
     <style>
     body{
         background-image : url(pics/pmv-chamara-sCFL6R7loQk-unsplash.jpg);
@@ -32,7 +34,7 @@
        VALUES ('[$firstname]','[$lastname]','[$adress]','[$phone]','[$email]','[$password]')";
       
        $result = mysqli_query($con,$sql);
-       
+
        if($result){
          echo 'working';
        }else{
@@ -90,11 +92,21 @@
 
 
     <div class="text-center">
-  <button type="submit" name="signUP" value="" style="background-color:#FFB3C6;" class="mt-5 btn-lg">SIGN UP</button>
+  <button type="submit" name="signUP" id="register" style="background-color:#FFB3C6;" class="mt-5 btn-lg">SIGN UP</button>
   <p class="mt-2 mb-5">You have an account already? <a href="login.php" class="text-primary">Log in</a></p>
 </div>
 </form>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript">
+  $(function(){
+  $('#register').click(function(){
+    Swal.fire('your registration is successful');
 
+  });
+});
+
+</script> -->
 <?php
     include 'headerfooter/footer.php';
     ?>
