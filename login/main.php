@@ -18,11 +18,11 @@ include 'connect/connect.php';
       $password = validate($_POST['password']);
 
       if(empty($email)){
-      header("location:login2.php?error=Email is required");
+      header("location:login.php?error=Email is required");
      exit();
       }
       else if(empty($password)){
-        header("location:login2.php?error=Password is required");
+        header("location:login.php?error=Password is required");
         
       }
       else{
@@ -36,21 +36,21 @@ include 'connect/connect.php';
          if($row['email']===$email && $row['password']===$password){
           echo'loggin';
         }else{
-          // header("location:login2.php?error=ERROR in email orrr password");
+          // header("location:login.php?error=ERROR in email orrr password");
           
         }
         
 
       }
       else{
-          header("location:login2.php?error=ERROR in email or password");
+          header("location:login.php?error=ERROR in email or password");
         }
       }
 
 
     }
      else{
-       header("location: login2.php");
+       header("location: login.php");
         }
        
       

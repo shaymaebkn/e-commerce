@@ -9,7 +9,7 @@
 
     <style>
     body{
-        background-image : url(pics/pmv-chamara-sCFL6R7loQk-unsplash.jpg);
+        background-image : url(../pics/pmv-chamara-sCFL6R7loQk-unsplash.jpg);
         background-size: cover;
       }
       </style>
@@ -18,8 +18,8 @@
 </head>
 <body>
     <?php
-    require_once('connect/connect.php');
-    include 'headerfooter/header.php';
+    require_once('../connect/connect.php');
+    include ('header.php');
 ?>
 <?php
     if(isset($_POST['signUP'])){
@@ -108,7 +108,7 @@
 
 </script> -->
 <?php
-    include 'headerfooter/footer.php';
+    include 'footer.php';
     ?>
 </body>
 </html>

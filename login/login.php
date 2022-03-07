@@ -7,7 +7,7 @@
     <title>indexx</title>
     <style>
     body{
-        background-image : url(pics/pmv-chamara-sCFL6R7loQk-unsplash.jpg);
+        background-image : url(../pics/pmv-chamara-sCFL6R7loQk-unsplash.jpg);
         background-size: cover;
       }
       .error{
@@ -21,13 +21,13 @@
 <body>
     
      <?php
-    include 'headerfooter/header.php';
-    include 'connect/connect.php';
+    include 'header.php';
+    include '../connect/connect.php';
     
     
     ?>
     
-<form action="login.php" method="post">
+<form action="main.php" method="post">
 
 <div class="text-center">
 <h1 class="m-5">SIGN IN</h1>
@@ -63,7 +63,7 @@
 </form>
 
 <?php
-include 'headerfooter/footer.php';
+include 'footer.php';
 ?>
 </body>
 </html>
