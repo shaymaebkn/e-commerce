@@ -21,7 +21,7 @@ if(isset($_SESSION['customerCode']) && isset($_SESSION['email'])) {
 <body>
 
     <h1> Hello : <?php echo $_SESSION['firstName']; ?></h1>
-    <button><a href="main.php">LOG OUT Here !</a></button>
+    <button><a href="logout.php">LOG OUT Here !</a></button>
     
 </body>
 </html>

@@ -40,7 +40,7 @@ include 'connect.php';
          $_SESSION['email']=$row['email'];
          $_SESSION['password']=$row['password'];
          $_SESSION['customerCode']=$row['customerCode'];
-        //  $_SESSION['firstName']=$row['firstName'];
+         $_SESSION['firstName']=$row['firstName'];
          
 
          header('location:profile.php');
