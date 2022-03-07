@@ -1,12 +1,14 @@
 <?php
 
     include_once 'connect/connect.php';
+
+
     $id = $_POST['id'];
     $first_name = $_POST['first-name'];
     $last_name = $_POST['last-name'];
     $department = $_POST['department'];
     $salary = $_POST['salary'];
-    $pic = $_POST['picture'];
+    $pic = $_FILES['picture']['name'];
 
     $statement = $bd->prepare("INSERT INTO `products`( `productName`, `description`, `unitPrice`, `quantityInStock`, `image`) 
                                VALUES (?,?,?,?,?)");

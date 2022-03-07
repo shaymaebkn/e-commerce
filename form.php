@@ -19,14 +19,14 @@
                       <thead>
                           <tr>
                             <th scope="col"></th>
-                            <th scope="col">Name</th>
-                            <th scope="col">last name</th>
+                            <th scope="col">productName</th>
+                            <th scope="col">description</th>
                             <!-- <th scope="col">Date </th> -->
-                            <th scope="col">Departement</th>
-                            <th scope="col">Salary</th>
+                            <th scope="col">unitPrice</th>
+                            <th scope="col">quantityInStock</th>
                             <!-- <th scope="col">Function</th> -->
 
-                            <th scope="col "colspane="2">picture</th>
+                            <th scope="col "colspane="2">image</th>
                             <!-- <th scope="col">operations</th> -->
                             
                           </tr>
@@ -64,12 +64,12 @@
                 </div>
                 <form action="register.php" method="POST" class="p-4">
                     <div class="mb-3">
-                        <label class="form-label" >Name:</label>
+                        <label class="form-label" >productName:</label>
                         <input type="text" class="form-control" name="first-name">
 
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" >Last name:</label>
+                        <label class="form-label" >description:</label>
                         <input type="text" class="form-control" name="last-name">
 
                     </div>
@@ -79,12 +79,12 @@
 
                     </div> -->
                     <div class="mb-3">
-                        <label class="form-label" >department:</label>
+                        <label class="form-label" >unitPrice:</label>
                         <input type="text" class="form-control" name="department">
 
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" >salary:</label>
+                        <label class="form-label" >quantityInStock:</label>
                         <input type="text" class="form-control" name="salary">
 
                     </div>
