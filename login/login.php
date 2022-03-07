@@ -58,7 +58,7 @@
 
 <div class="text-center">
 <button type="submit" name="login" style="background-color:#FFB3C6;" class="mt-5 btn-lg">LOGIN</button>
-<p class="mt-2 mb-5">Don’t have an account yet? <a href="signup.php" class="text-primary">Sign-up</a> now</p>
+<p class="mt-2 mb-5">Don’t have an account yet? <a href="login/signup.php" class="text-primary">Sign-up</a> now</p>
 </div>
 </form>
 
