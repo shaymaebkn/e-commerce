@@ -12,6 +12,11 @@
         background-image : url(../pics/pmv-chamara-sCFL6R7loQk-unsplash.jpg);
         background-size: cover;
       }
+      #rg{
+        color:red;
+        text-align:center;
+        background-color:yellow;
+      }
       </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -39,7 +44,7 @@
       // $sql = $result->fetchAll(PDO::FETCH_OBJ);
 
        if($result){
-         echo 'your registration is successful';
+         echo "<h1 id='rg'>your registration is successful</h1>";
        }else{
          echo 'your registration is "NOT" successful';
        }}
