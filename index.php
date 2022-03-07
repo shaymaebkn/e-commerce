@@ -7,12 +7,12 @@ include 'headerfooter/header.php';
         </button>
     <div class="container ">
         <div >
-            <img style="width: 100%;" src="pics/sikin care.jpg" alt="">
+            <img style="width: 99%;" src="pics/sikin care.jpg" alt="">
         </div>
         <div class="d-flex justify-content-center p-3">
-            <img class="image p-2" style="width: 35%; "  src="pics/cosmetic men.JPG" alt="">
-            <img class="image p-2" style="width: 35%;" src="pics/cosmetic kids.jpg" alt="">
-            <img class="image p-2" style="width: 35%;" src="pics/cosmetic women.jpg" alt="">
+            <img class="image p-3"  src="pics/cosmetic men.JPG" alt="">
+            <img class="image p-3" src="pics/cosmetic kids.jpg" alt="">
+            <img class="image p-3"  src="pics/cosmetic women.jpg" alt="">
         </div>
 
     </div>
@@ -164,6 +164,13 @@ include 'headerfooter/header.php';
 
         </div>
     </section>
+    <style>
+        .image{
+            height: 400px;
+            width: 35%;
+        }
+
+    </style>
 
    <?php
    include 'headerfooter/footer.php';
