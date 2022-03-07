@@ -19,6 +19,7 @@ if(isset($_SESSION['customerCode']) && isset($_SESSION['email'])) {
             text-align:center;
             font-size:50px;
         }
+        
     </style>
 </head>
 <body>
@@ -30,6 +31,7 @@ if(isset($_SESSION['customerCode']) && isset($_SESSION['email'])) {
   <h4 class="alert-heading">مرحبا : <?php echo $_SESSION['firstName']; ?></h4>
   <p> تم تسجيل دخولك بنجاح</p>
   <hr>
+  <button class="btn btn-danger btn-lg"><a href="logout.php" class="text-light" >LOGOUT</a></button>
 </div>
     
 </body>
