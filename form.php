@@ -44,10 +44,7 @@
                               <td>
                  
                               <img src="<?php echo $data->image; ?>" alt="" width="35px" height="35px" style = "border-radius:50% ;"></td>
-                            <td>
-                              <td><a class="text-success" href="edit.php?id=<?php echo $data->productID; ?>"><i class="bi bi-pencil-square"></i></a></td>
-                                <td><a onclick="return confirm('are you sure you wanna delete this row?');" class="text-danger" href="delete.php?id=<?php echo $data->productID; ?>"><i class="bi bi-trash"></i></a></td>
-                          </tr>
+                           
                           <?php 
                                 }
                             ?>

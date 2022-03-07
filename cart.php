@@ -1,6 +1,5 @@
 <?php
     include 'headerfooter/header.php';
-
 ?>
 <main>
     <section class="section1">
