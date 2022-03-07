@@ -17,7 +17,7 @@ drop table if exists Products;
 /*==============================================================*/
 create table Customers
 (
-   customerCode         int not null,
+   customerCode         int not null AUTO_INCREMENT,
    lastName             varchar(100) not null,
    firstName            varchar(100) not null,
    adress               varchar(254) not null,
@@ -32,7 +32,8 @@ create table Customers
 /*==============================================================*/
 create table OrderDetails
 (
-   orderID              int not null,
+   orderID              int not null AUTO_INCREMENT,
+   
    productID            int not null,
    orderedQuantity      int,
    primary key (orderID, productID)
@@ -43,7 +44,7 @@ create table OrderDetails
 /*==============================================================*/
 create table Orders
 (
-   orderID              int not null,
+   orderID              int not null AUTO_INCREMENT,
    customerCode         int not null,
    orderDate            datetime,
    deliveryAddress      varchar(254),
@@ -55,7 +56,7 @@ create table Orders
 /*==============================================================*/
 create table Products
 (
-   productID            int not null,
+   productID            int not null AUTO_INCREMENT,
    productName          varchar(254),
    description          varchar(254),
    unitPrice            numeric(8,0),

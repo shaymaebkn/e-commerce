@@ -3,7 +3,7 @@
 
 $user = "root";
 $password = "";
-$name_bd = "e-commerce";
+$name_bd = "Database_e-commerce";
 
 try {
 	$bd = new PDO (
