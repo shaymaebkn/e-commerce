@@ -2,9 +2,11 @@
 
 include '../connect/connect.php';
 
+
+
     if(isset($_POST['email']) && isset($_POST['password'])){
 
-    
+    // $customerCode = $_GET['customerCode'];
  
       function validate($data){
 
@@ -23,7 +25,7 @@ include '../connect/connect.php';
       }
       else if(empty($password)){
         header("location:login.php?error=Password is required");
-        
+        exit();
       }
       else{
         $sql="SELECT * FROM `customers` WHERE email='$email' AND password='$password'";
@@ -36,7 +38,7 @@ include '../connect/connect.php';
          if($row['email']===$email && $row['password']===$password){
           echo'loggin';
         }else{
-          // header("location:login.php?error=ERROR in email orrr password");
+          header("location:login.php?error=incorrect in email orr password");
           
         }
         

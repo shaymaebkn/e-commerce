@@ -31,7 +31,7 @@
       $password = $_POST['password'];
   
        $sql="INSERT INTO `customers`(`firstName`, `lastName`, `adress`, `phone`, `email`, `password`) 
-       VALUES ('[$firstname]','[$lastname]','[$adress]','[$phone]','[$email]','[$password]')";
+       VALUES ('$firstname','$lastname','$adress','$phone','$email','$password')";
       
        $result = mysqli_query($con,$sql);
 
