@@ -6,7 +6,8 @@ $con=new mysqli('localhost','root','','Database_e-commerce');  // methode two fo
 
 if($con){
     
-     echo 'connection is working';
+    //  echo 'connection is working';
+	
     
 }
 else{
