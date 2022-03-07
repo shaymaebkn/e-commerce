@@ -17,16 +17,7 @@ try {
 	echo "there is a problem: ".$e->getMessage();
 }
 
-// $con=new mysqli('localhost','root','','e-commerce');  // methode taniya dyal connect lowla mbghatch tkhdm liya  
 
-// if($con){
-    
-//      echo 'connection is working';
-    
-// }
-// else{
-//     die(mysqli_error($con));
-// }
 
 
 

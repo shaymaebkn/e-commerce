@@ -22,7 +22,7 @@
     
      <?php
     include 'header.php';
-    include '../connect/connect.php';
+    include 'connect.php';
     
     
     ?>

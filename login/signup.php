@@ -18,7 +18,7 @@
 </head>
 <body>
     <?php
-    require_once('../connect/connect.php');
+    require_once('connect.php');
     include ('header.php');
 ?>
 <?php
@@ -30,13 +30,13 @@
       $email = $_POST['email'];
       $password = $_POST['password'];
   
-      //  $sql="INSERT INTO `customers`(`firstName`, `lastName`, `adress`, `phone`, `email`, `password`) 
-      //  VALUES ('$firstname','$lastname','$adress','$phone','$email','$password')";
+       $sql="INSERT INTO `customers`(`firstName`, `lastName`, `adress`, `phone`, `email`, `password`) 
+       VALUES ('$firstname','$lastname','$adress','$phone','$email','$password')";
       
-      //  $result = mysqli_query($con,$sql);
+       $result = mysqli_query($con,$sql);
 
-       $result = $bd -> query("INSERT INTO `customers`(`firstName`, `lastName`, `adress`, `phone`, `email`, `password`) VALUES ('$firstname','$lastname','$adress','$phone','$email','$password')");
-      $sql = $result->fetchAll(PDO::FETCH_OBJ);
+      //  $result = $bd -> query("INSERT INTO `customers`(`firstName`, `lastName`, `adress`, `phone`, `email`, `password`) VALUES ('$firstname','$lastname','$adress','$phone','$email','$password')");
+      // $sql = $result->fetchAll(PDO::FETCH_OBJ);
 
        if($result){
          echo 'your registration is successful';
