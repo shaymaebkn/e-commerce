@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!-- bootstrap -->
-    <link rel="stylesheet" href="cart_style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../cart_style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,18 +19,18 @@
             </div>
             <div class="nav_links">
                 <ul>
-                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="../index.php">HOME</a></li>
                     <li id="catalogue"><a href="#">CATALOGUE</a></li>
-                    <li><a href="signup.php">SIGN-UP</a></li>
+                    <li><a href="../signup.php">SIGN-UP</a></li>
                 </ul>
             </div>
             <div class="logo" id="logo">
-                <a href="index.php"><img src="pics/logo.png" alt="paon" width="160px"></a>
+                <a href="../index.php"><img src="../pics/logo.png" alt="paon" width="160px"></a>
             </div>
             <div class="icons" mt-2>
-                <a href="#"><img src="pics/search.png"></a>
-                <a href="cart.php"><img src="pics/cart.png"></a>
-                <a href="#"><img src="pics/profil-de-lutilisateur.png"></a>
+                <a href="#"><img src="../pics/search.png"></a>
+                <a href="cart.php"><img src="../pics/cart.png"></a>
+                <a href="#"><img src="../pics/profil-de-lutilisateur.png"></a>
             </div>
         </nav>
         <nav class="nav2" id="nav2">
