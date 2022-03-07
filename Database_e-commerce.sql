@@ -33,7 +33,7 @@ create table Customers
 create table OrderDetails
 (
    orderID              int not null AUTO_INCREMENT,
-   orderID              int not null ,
+   
    productID            int not null,
    orderedQuantity      int,
    primary key (orderID, productID)
