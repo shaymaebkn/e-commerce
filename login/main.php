@@ -1,6 +1,6 @@
 <?php
 
-include 'connect/connect.php';
+include '../connect/connect.php';
 
     if(isset($_POST['email']) && isset($_POST['password'])){
 

@@ -36,9 +36,9 @@
        $result = mysqli_query($con,$sql);
 
        if($result){
-         echo 'working';
+         echo 'your registration is successful';
        }else{
-         echo 'not workingg';
+         echo 'your registration is "NOT" successful';
        }}
   
     ?>
