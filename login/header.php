@@ -19,7 +19,7 @@
             </div>
             <div class="nav_links">
                 <ul>
-                    <li><a href="../index.php">HOME</a></li>
+                    <li><a href="homee/index.php">HOME</a></li>
                     <li id="catalogue"><a href="#">CATALOGUE</a></li>
                     <li><a href="signup.php">SIGN-UP</a></li>
                 </ul>
