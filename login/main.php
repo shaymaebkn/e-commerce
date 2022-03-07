@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include '../connect/connect.php';
 
 
@@ -36,7 +36,14 @@ include '../connect/connect.php';
          $row=mysqli_fetch_assoc($result);
 
          if($row['email']===$email && $row['password']===$password){
-          echo'loggin';
+
+         $_SESSION['email']=$row['email'];
+         $_SESSION['password']=$row['password'];
+         $_SESSION['customerCode']=$row['customerCode'];
+        //  $_SESSION['firstName']=$row['firstName'];
+         
+
+         header('location:profile.php');
         }else{
           header("location:login.php?error=incorrect in email orr password");
           
