@@ -8,7 +8,7 @@
     $last_name = $_POST['last-name'];
     $department = $_POST['department'];
     $salary = $_POST['salary'];
-    $pic = $_FILES['picture']['name'];
+    $pic = $_POST['picture'];
 
     $statement = $bd->prepare("INSERT INTO `products`( `productName`, `description`, `unitPrice`, `quantityInStock`, `image`) 
                                VALUES (?,?,?,?,?)");

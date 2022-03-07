@@ -5,7 +5,7 @@
      <?php 
     include_once 'connect/connect.php';
     $statement = $bd -> query("SELECT * FROM `products`");
-    $employe = $statement->fetchAll(PDO::FETCH_OBJ);
+    $product = $statement->fetchAll(PDO::FETCH_OBJ);
     ?>
 
 
@@ -33,7 +33,7 @@
                       </thead>
                       <tbody>
                       <?php 
-                                foreach($employe as $data){ 
+                                foreach($product as $data){ 
                     ?>
                           <tr>
                               <td scope="row"><?php echo $data->productID; ?></td>
@@ -42,7 +42,8 @@
                               <td><?php echo $data->unitPrice; ?></td>
                               <td><?php echo $data->quantityInStock; ?></td>
                               <td>
-                              <img src="<?php echo $data->picture; ?>" alt="this is a employees photo" width="35px" height="35px" style = "border-radius:50% ;"></td>
+                 
+                              <img src="<?php echo $data->image; ?>" alt="" width="35px" height="35px" style = "border-radius:50% ;"></td>
                             <td>
                               <td><a class="text-success" href="edit.php?id=<?php echo $data->productID; ?>"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><a onclick="return confirm('are you sure you wanna delete this row?');" class="text-danger" href="delete.php?id=<?php echo $data->productID; ?>"><i class="bi bi-trash"></i></a></td>
@@ -102,7 +103,7 @@
                     <span class="input-group-text">
                         <i class="bi bi-image"></i>
                     </span>
-                    <input type="file"  name="picture"  id="7a" class="form-control"  >
+                    <input type="URL"  name="picture"  id="7a" class="form-control"  >
                     <span class="input-group-text">
                         <i class="bi bi-arrow-counterclockwise"></i>
                         </span>
