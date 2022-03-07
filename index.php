@@ -30,8 +30,8 @@ include 'headerfooter/header.php';
         <?php 
              foreach($product as $data){ 
             ?>
-               
-                <div class="card container" style="width: 19rem;">
+               <div class="row col-3 p-3">
+                <div class="card container" style="width: 20rem;">
                     <img src="<?php echo $data->image; ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                     <h6 class="text-center"><?php echo number_format($data->unitPrice); ?>DH</h6>
@@ -43,7 +43,7 @@ include 'headerfooter/header.php';
                     </svg></a>
                     </div>
                 </div>
-           
+           </div>
         <?php 
          }
         ?>
