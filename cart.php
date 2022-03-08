@@ -21,10 +21,23 @@
                         <th>Total</th>
                     </thead>
                     <tbody>
-                        <td>tes</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
+                        <?php 
+                            include 'connect/myconnect.php';
+                            $sql = "SELECT productName,unitPrice,orderedQuantity FROM products,orderdetails WHERE orderID='1'";
+                            $result = mysqli_query($connect, $sql);
+                            $resultCheck = mysqli_num_rows($result);
+
+                            if ($resultCheck > 0){
+                                while ($row = mysqli_fetch_assoc($result)){
+                        ?>
+                        <td><?php echo $row['productName']; ?></td>
+                        <td><?php echo $row['unitPrice']; ?></td>
+                        <td><?php echo $row['orderedQuantity']; ?></td>
+                        <td><?php echo $row['orderedQuantity'] * $row['unitPrice']; ?></td>
+                        <?php 
+                                }
+                            }
+                        ?>
                     </tbody>
                     <tfoot>
                         <td colspan="3" align="center">Subtotal before delevry charges</td>
