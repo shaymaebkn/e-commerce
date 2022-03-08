@@ -25,7 +25,7 @@
                 </ul>
             </div>
             <div class="logo" id="logo">
-                <a href="#"><img src="pics/logo.png" alt="paon" width="160px"></a>
+                <a href="index.php"><img src="pics/logo.png" alt="paon" width="160px"></a>
             </div>
             <div class="icons" mt-2>
                 <a href="#"><img src="pics/search.png"></a>
