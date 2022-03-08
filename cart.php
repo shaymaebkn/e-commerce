@@ -15,7 +15,7 @@
             <div class="cart_table">
                 <table class="table">
                     <thead>
-                        <th>Product</th>
+                        <th>Products</th>
                         <th>Price/un</th>
                         <th>QTE</th>
                         <th>Tota</th>
