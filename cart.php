@@ -1,6 +1,7 @@
 <?php
     include 'headerfooter/header.php';
 ?>
+<style><?php include 'cart_style.css'; ?></style>
 <main>
     <section class="section1">
             <div class="cart_list">
