@@ -18,7 +18,7 @@
                         <th>Product</th>
                         <th>Price/un</th>
                         <th>QTE</th>
-                        <th>Total</th>
+                        <th>Tota</th>
                     </thead>
                     <tbody>
                         <?php 
