@@ -1,8 +1,9 @@
+
 <?php
 
-$password = "";
 $user = "root";
-$name_bd = "e-commerce";
+$password = "";
+$name_bd = "Database_e-commerce";
 
 try {
 	$bd = new PDO (
@@ -17,6 +18,10 @@ try {
 }
 
 
-?>
 
-    
+
+
+?> 
+
+
+
