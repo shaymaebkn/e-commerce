@@ -1,86 +1,84 @@
-/*==============================================================*/
-/* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de cr�ation :  01/03/2022 12:30:44                      */
-/*==============================================================*/
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1
+-- Généré le : mar. 08 mars 2022 à 10:16
+-- Version du serveur : 10.4.22-MariaDB
+-- Version de PHP : 7.4.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
-drop table if exists Customers;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-drop table if exists OrderDetails;
+--
+-- Base de données : `database_e-commerce`
+--
 
-drop table if exists Orders;
+-- --------------------------------------------------------
 
-drop table if exists Products;
+--
+-- Structure de la table `products`
+--
 
-/*==============================================================*/
-/* Table : Customers                                            */
-/*==============================================================*/
-create table Customers
-(
-   customerCode         int not null AUTO_INCREMENT,
-   lastName             varchar(100) not null,
-   firstName            varchar(100) not null,
-   adress               varchar(254) not null,
-   phone                varchar(15) not null,
-   email                varchar(254) not null,
-   password             varchar(254) not null,
-   primary key (customerCode)
-);
+CREATE TABLE `products` (
+  `productID` int(11) NOT NULL,
+  `productName` varchar(254) DEFAULT NULL,
+  `description` varchar(254) DEFAULT NULL,
+  `unitPrice` decimal(8,0) DEFAULT NULL,
+  `quantityInStock` int(11) DEFAULT NULL,
+  `image` varchar(254) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-/*==============================================================*/
-/* Table : OrderDetails                                         */
-/*==============================================================*/
-create table OrderDetails
-(
-   orderID              int not null AUTO_INCREMENT,
-   
-   productID            int not null,
-   orderedQuantity      int,
-   primary key (orderID, productID)
-);
+--
+-- Déchargement des données de la table `products`
+--
 
-/*==============================================================*/
-/* Table : Orders                                               */
-/*==============================================================*/
-create table Orders
-(
-   orderID              int not null AUTO_INCREMENT,
-   customerCode         int not null,
-   orderDate            datetime,
-   deliveryAddress      varchar(254),
-   primary key (orderID)
-);
+INSERT INTO `products` (`productID`, `productName`, `description`, `unitPrice`, `quantityInStock`, `image`) VALUES
+(3, 'Love Nature', 'skin care', '35', 0, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F38382%2F38382.png'),
+(6, 'HairX', 'skin care', '45', 500, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F41676%2F41676.png'),
+(7, 'Gold Essonza', 'pure skin', '399', 1000, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F42614%2F42614.png'),
+(8, 'Feet up ', 'skin care', '49', 1900, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F38391%2F38391.png'),
+(9, 'The one', 'makeup', '59', 200, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F41989%2F41989.png'),
+(10, 'Miroire Golden', 'makeup', '65', 900, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F43134%2F43134.png'),
+(11, 'Giordan Gold', 'Makeup', '149', 2000, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F42355%2F42355.png'),
+(12, 'oinseau polisoir', 'Makeup', '89', 200, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F30887%2F30887.png'),
+(13, 'so fever ', 'perfum', '394', 400, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F42835%2F42835.png'),
+(14, 'Love potience', 'perfum', '199', 100, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F42815%2F42815.png'),
+(15, 'DIVIN', 'perfum', '296', 300, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F38497%2F38497.png'),
+(16, 'Enigma', 'perfum', '389', 200, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F41542%2F41542.png'),
+(17, 'HairX', 'hair', '49', 200, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F42840%2F42840.png'),
+(18, 'WOUM', 'hair', '109', 900, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F42888%2F42888.png'),
+(19, 'eleo', 'hair', '19900', 500, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F38601%2F38601.png'),
+(20, 'love nature', 'hair', '45', 900, 'https://media-afr-cdn.oriflame.com/-/media/images/externalImage.ashx?externalMediaId=product-management-media%2F42897%2F42897.png');
 
-/*==============================================================*/
-/* Table : Products                                             */
-/*==============================================================*/
-create table Products
-(
-   productID            int not null AUTO_INCREMENT,
-   productName          varchar(254),
-   description          varchar(254),
-   unitPrice            numeric(8,0),
-   quantityInStock      int,
-   image                varchar(254),
-   primary key (productID)
-);
+--
+-- Index pour les tables déchargées
+--
 
-alter table OrderDetails add constraint FK_Contient foreign key (orderID)
-      references Orders (orderID) on delete restrict on update restrict;
+--
+-- Index pour la table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`productID`);
 
-alter table OrderDetails add constraint FK_commande_dans foreign key (productID)
-      references Products (productID) on delete restrict on update restrict;
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
 
-alter table Orders add constraint FK_commander foreign key (customerCode)
-      references Customers (customerCode) on delete restrict on update restrict;
+--
+-- AUTO_INCREMENT pour la table `products`
+--
+ALTER TABLE `products`
+  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+COMMIT;
 
-
-
-/*Delete From OrderDetail;
-
-Delete From Orders;
-
-Delete From Products;
-
-Delete From Customers;*/
-
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -30,7 +30,7 @@
             <div class="icons" mt-2>
                 <a href="#"><img src="pics/search.png"></a>
                 <a href="cart.php"><img src="pics/cart.png"></a>
-                <a href="#"><img src="pics/profil-de-lutilisateur.png"></a>
+                <a href="login/profile.php"><img src="pics/profil-de-lutilisateur.png"></a>
             </div>
         </nav>
         <nav class="nav2" id="nav2">
