@@ -8,8 +8,6 @@
     $product = $statement->fetchAll(PDO::FETCH_OBJ);
     ?>
 
-
- 
   <div class="container mt-7">
       <div class="row justify-content-center">
           <div class="col-md-7">
