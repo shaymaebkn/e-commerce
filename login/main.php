@@ -43,7 +43,7 @@ include 'connect.php';
          $_SESSION['firstName']=$row['firstName'];
          
 
-         header('location:profile.php');
+         header('location:profile.php?custumorID=');
         }else{
           header("location:login.php?error=incorrect in email orr password");
           

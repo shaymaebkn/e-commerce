@@ -23,9 +23,10 @@
                     <tbody>
                         <?php 
                             include 'connect/myconnect.php';
-                            $sql = "SELECT productName,unitPrice,orderedQuantity FROM products,orderdetails WHERE orderID='1'";
+                            $sql = "SELECT orderdetails.orderedQuantity, products.productName, products.unitPrice FROM orderdetails INNER JOIN products ON orderdetails.productID=products.productID WHERE orderID='1';";
                             $result = mysqli_query($connect, $sql);
                             $resultCheck = mysqli_num_rows($result);
+                            $total = 0;
 
                             if ($resultCheck > 0){
                                 while ($row = mysqli_fetch_assoc($result)){
@@ -33,22 +34,29 @@
                         <tr>
                             <td><?php echo $row['productName']; ?></td>
                             <td><?php echo $row['unitPrice']; ?></td>
-                            <td><?php echo $row['orderedQuantity']; ?></td>
+                            <td><form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST"><input type="number" name="quantity" min="1" value="<?php echo $row['orderedQuantity']; ?>"></td>
                             <td><?php echo $row['orderedQuantity'] * $row['unitPrice']; ?></td>
+                            <td><?php echo '<a class="delete">X</a>';?></td>
                         </tr>
-                        <?php 
+                        <?php
+                            $total += $row['orderedQuantity'] * $row['unitPrice'];
                                 }
                             }
                         ?>
                     </tbody>
                     <tfoot>
                         <td colspan="3" align="center">Subtotal before delevry charges</td>
-                        <td>Total</td>
+                        <td><?php echo $total; ?></td>
                     </tfoot>
                 </table>
             </div>
             <div class="next">
-                <button class="next_button">Next</button>
+                <button class="next_button" type="submit">Next</button></form>
+                <?php
+                    $quantity = $_POST['quantity'];
+                    $sql = "UPDATE orderDetails SET orderedQuantity='$quantity' WHERE orderID='1' AND productID='3';";
+                    mysqli_query($connect, $sql);
+                ?>
             </div>
 
     </section>

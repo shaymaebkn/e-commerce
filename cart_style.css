@@ -44,3 +44,11 @@ main{
     border-radius: 6px;
     
 }
+.delete{
+    text-decoration: none;
+    color: black;
+}
+.delete:hover{
+    cursor: pointer;
+    color: red;
+}
