@@ -30,10 +30,12 @@
                             if ($resultCheck > 0){
                                 while ($row = mysqli_fetch_assoc($result)){
                         ?>
-                        <td><?php echo $row['productName']; ?></td>
-                        <td><?php echo $row['unitPrice']; ?></td>
-                        <td><?php echo $row['orderedQuantity']; ?></td>
-                        <td><?php echo $row['orderedQuantity'] * $row['unitPrice']; ?></td>
+                        <tr>
+                            <td><?php echo $row['productName']; ?></td>
+                            <td><?php echo $row['unitPrice']; ?></td>
+                            <td><?php echo $row['orderedQuantity']; ?></td>
+                            <td><?php echo $row['orderedQuantity'] * $row['unitPrice']; ?></td>
+                        </tr>
                         <?php 
                                 }
                             }
