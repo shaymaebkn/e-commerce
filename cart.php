@@ -21,7 +21,7 @@
                         <th>Total</th>
                     </thead>
                     <tbody>
-                        <td>test</td>
+                        <td>tes</td>
                         <td>test</td>
                         <td>test</td>
                         <td>test</td>
