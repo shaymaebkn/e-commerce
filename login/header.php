@@ -19,7 +19,7 @@
             </div>
             <div class="nav_links">
                 <ul>
-                    <li><a href="homee/index.php">HOME</a></li>
+                    <li><a href="index.php">HOME</a></li>
                     <li id="catalogue"><a href="#">CATALOGUE</a></li>
                     <li><a href="signup.php">SIGN-UP</a></li>
                 </ul>
@@ -30,7 +30,7 @@
             <div class="icons" mt-2>
                 <a href="#"><img src="../pics/search.png"></a>
                 <a href="cart.php"><img src="../pics/cart.png"></a>
-                <a href="#"><img src="../pics/profil-de-lutilisateur.png"></a>
+                <a href="profile.php"><img src="../pics/profil-de-lutilisateur.png"></a>
             </div>
         </nav>
         <nav class="nav2" id="nav2">

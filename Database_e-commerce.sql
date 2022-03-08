@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 08 mars 2022 à 10:16
+-- Généré le : mar. 08 mars 2022 à 10:26
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.4.27
 
@@ -20,6 +20,54 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `database_e-commerce`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `customers`
+--
+
+CREATE TABLE `customers` (
+  `customerCode` int(11) NOT NULL,
+  `lastName` varchar(100) NOT NULL,
+  `firstName` varchar(100) NOT NULL,
+  `adress` varchar(254) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `email` varchar(254) NOT NULL,
+  `password` varchar(254) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `customers`
+--
+
+INSERT INTO `customers` (`customerCode`, `lastName`, `firstName`, `adress`, `phone`, `email`, `password`) VALUES
+(1, 'boukhana', 'shaymae', 'shaymaebjkbjkbk', '067363747844', 'chaymae@gmail.com', 'shaymae0909');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `orderdetails`
+--
+
+CREATE TABLE `orderdetails` (
+  `orderID` int(11) NOT NULL,
+  `productID` int(11) NOT NULL,
+  `orderedQuantity` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `orders`
+--
+
+CREATE TABLE `orders` (
+  `orderID` int(11) NOT NULL,
+  `customerCode` int(11) NOT NULL,
+  `orderDate` datetime DEFAULT NULL,
+  `deliveryAddress` varchar(254) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -63,6 +111,26 @@ INSERT INTO `products` (`productID`, `productName`, `description`, `unitPrice`, 
 --
 
 --
+-- Index pour la table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`customerCode`);
+
+--
+-- Index pour la table `orderdetails`
+--
+ALTER TABLE `orderdetails`
+  ADD PRIMARY KEY (`orderID`,`productID`),
+  ADD KEY `FK_commande_dans` (`productID`);
+
+--
+-- Index pour la table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`orderID`),
+  ADD KEY `FK_commander` (`customerCode`);
+
+--
 -- Index pour la table `products`
 --
 ALTER TABLE `products`
@@ -73,10 +141,45 @@ ALTER TABLE `products`
 --
 
 --
+-- AUTO_INCREMENT pour la table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `customerCode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `orderdetails`
+--
+ALTER TABLE `orderdetails`
+  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
   MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `orderdetails`
+--
+ALTER TABLE `orderdetails`
+  ADD CONSTRAINT `FK_Contient` FOREIGN KEY (`orderID`) REFERENCES `orders` (`orderID`),
+  ADD CONSTRAINT `FK_commande_dans` FOREIGN KEY (`productID`) REFERENCES `products` (`productID`);
+
+--
+-- Contraintes pour la table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `FK_commander` FOREIGN KEY (`customerCode`) REFERENCES `customers` (`customerCode`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
