@@ -15,7 +15,7 @@
             <div class="cart_table">
                 <table class="table">
                     <thead>
-                        <th>Products</th>
+                        <th>Product</th>
                         <th>Price/un</th>
                         <th>QTE</th>
                         <th>Total</th>
@@ -28,7 +28,7 @@
                             $resultCheck = mysqli_num_rows($result);
 
                             if ($resultCheck > 0){
-                                while ($row = mysqli_fetch_assoc($result)){
+                                 ($row = mysqli_fetch_assoc($result))
                         ?>
                         <td><?php echo $row['productName']; ?></td>
                         <td><?php echo $row['unitPrice']; ?></td>
@@ -36,7 +36,7 @@
                         <td><?php echo $row['orderedQuantity'] * $row['unitPrice']; ?></td>
                         <?php 
                                 }
-                            }
+                        
                         ?>
                     </tbody>
                     <tfoot>
