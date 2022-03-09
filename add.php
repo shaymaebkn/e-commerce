@@ -3,7 +3,7 @@
 ?>
 <?php
     if(!isset($_GET['id'])){
-        header('Location: index.php?mensaje=eroorid');
+        header('Location: add.php?mensaje=eroorid');
         exit();
     }
 
@@ -15,42 +15,54 @@
     $product = $statement->fetch(PDO::FETCH_OBJ);
     $data = $product;
     //print_r($persona);
-   
-    $statement = $bd->prepare("SELECT  `lastName`, `firstName`, `adress`, `phone`, `email`, `password` 
-    FROM `customers` WHERE `customerCode`='?';");
-
-    $statement = $bd->prepare("SELECT  `lastName`, `firstName`, `adress`, `phone`, `email`, `password` 
-    FROM `customers` WHERE `customerCode`='?';");
-
- 
- 
-
-
     
+   
+
+
+    ?>
+<?php 
+    session_start(); 
+    if(isset($_SESSION['email'])) {
+    $statement = $bd->prepare("SELECT * FROM `customers` WHERE  customerCode = '?'");
+    $customers = $statement->fetchAll(PDO::FETCH_OBJ);
+    $custtomer = $customers;
+ 
+?>
+
+    <body>
+        
+            <div class="container">
+                <div class="card ">
+                    <form class="d-flex" action="insertcard.php?id=<?php echo $data->productID; ?>" method="POST">
+                        <div style="width: 20rem;" >
+                        <input type="hidden" name="adress" value="<?php  echo $_SESSION['adress']; ?>">
+                        <input type="hidden" name="customerCode" value="<?php echo $_SESSION['customerCode']; ?>" >
+                        <img src="<?php echo $data->image; ?>" class="card-img-top" alt="...">
+                        </div>
+
+                        <div class="card-body p-3 " >
+                        <h4 class="" ><?php echo $data->productName; ?></h4>   
+                        <h6 class=""><?php echo number_format($data->unitPrice); ?>DH</h6>
+                        <p class="">description <?php echo $data->description; ?></p>
+                        <input class="p-3" type="number" id="input" name="quantity"><br>
+                        <br>
+                            <input type="submit" name="add" class="btn btn-primary" value="add to card">
+                        
+                        </div>  
+                    </form>
+                  </div>   
+            </div>
+            
+       
+    <?php 
+      }
     
     ?>
-<body>
-            <div class="row col-3 p-3 ">
-                <div class="card " style="width: 20rem;">
-                    <img src="<?php echo $data->image; ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                     <h4 class="text-center" class="card-text"><?php echo $data->productName; ?></h4>   
-                    <h6 class="text-center"><?php echo number_format($data->unitPrice); ?>DH</h6>
-                    <p class="text-center"> <?php echo $data->description; ?></p>
-
-                    <form action="insertcard.php?id=<?php echo $data->productID; ?>" method="POST">
-                    <input class="text-center" type="number" id="input" name="quantity"><br>
-                    <div class="d-grid">
-                        <input type="submit" name="add" class="btn btn-primary" value="add to card">
-                    </div>
-                    </form>
-                    </div>
-                </div>
-           </div>
-
+ 
 <style>
     #input{
-        border: none;
+        height: 20px;
+        width: 100px;
     }
 
 </style>
