@@ -32,25 +32,23 @@
     <body>
         
             <div class="container">
-                <div class="card ">
                     <form class="d-flex" action="insertcard.php?id=<?php echo $data->productID; ?>" method="POST">
                         <div style="width: 20rem;" >
-                        <input type="hidden" name="adress" value="<?php  echo $_SESSION['adress']; ?>">
+                        <input type="hidden" name="id" value="<?php echo $data->productID; ?>">
+                        <input type="hidden" name="adress" value="">
                         <input type="hidden" name="customerCode" value="<?php echo $_SESSION['customerCode']; ?>" >
                         <img src="<?php echo $data->image; ?>" class="card-img-top" alt="...">
                         </div>
 
-                        <div class="card-body p-3 " >
+                        <div style="margin-top: 50px;">
                         <h4 class="" ><?php echo $data->productName; ?></h4>   
                         <h6 class=""><?php echo number_format($data->unitPrice); ?>DH</h6>
                         <p class="">description <?php echo $data->description; ?></p>
                         <input class="p-3" type="number" id="input" name="quantity"><br>
                         <br>
                             <input type="submit" name="add" class="btn btn-primary" value="add to card">
-                        
                         </div>  
-                    </form>
-                  </div>   
+                    </form> 
             </div>
             
        
