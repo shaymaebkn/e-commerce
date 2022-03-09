@@ -42,7 +42,6 @@ include 'connect.php';
          $_SESSION['customerCode']=$row['customerCode'];
          $_SESSION['firstName']=$row['firstName'];
          
-        
          header("location:profile.php");
         }else{
           header("location:login.php?error=incorrect in email orr password");

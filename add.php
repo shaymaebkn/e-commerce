@@ -3,34 +3,27 @@
 ?>
 <?php
     if(!isset($_GET['id'])){
-        header('Location: index.php?mensaje=eroor');
+        header('Location: index.php?mensaje=eroorid');
         exit();
     }
 
     include_once 'connect/connect.php';
-    $id = $_GET['id'];
 
+    $id = $_GET['id'];
     $statement = $bd->prepare("SELECT * FROM products WHERE productID = ?;");
     $statement->execute([$id]);
     $product = $statement->fetch(PDO::FETCH_OBJ);
     $data = $product;
     //print_r($persona);
    
+    $statement = $bd->prepare("SELECT  `lastName`, `firstName`, `adress`, `phone`, `email`, `password` 
+    FROM `customers` WHERE `customerCode`='?';");
+
+    $statement = $bd->prepare("SELECT  `lastName`, `firstName`, `adress`, `phone`, `email`, `password` 
+    FROM `customers` WHERE `customerCode`='?';");
 
  
- if(isset($_POST['add'])){
-     
-    include_once 'login/connect.php';
-    $sql="SELECT * FROM `customers` WHERE customerCode= ?;";
-    $result=mysqli_query($con,$sql);
-
-    $customercode = $_SESSION['customerCode'] ;
-    $quantity = $_POST['quantity'];
-    $id = $_GET['id'];
-
-    $statement = $bd->prepare("INSERT INTO `orders`(`customerCode`, `orderDate`, `deliveryAddress`) VALUES (?,?,?);");
-    $result = $statement->execute([$id,$quantity]);
- }
+ 
 
 
     
@@ -46,7 +39,7 @@
                     <p class="text-center"> <?php echo $data->description; ?></p>
 
                     <form action="insertcard.php?id=<?php echo $data->productID; ?>" method="POST">
-                    <input type="number" name="quantity">
+                    <input class="text-center" type="number" id="input" name="quantity"><br>
                     <div class="d-grid">
                         <input type="submit" name="add" class="btn btn-primary" value="add to card">
                     </div>
@@ -55,7 +48,12 @@
                 </div>
            </div>
 
+<style>
+    #input{
+        border: none;
+    }
 
+</style>
 </body>
 <?php 
     include 'headerfooter/footer.php';

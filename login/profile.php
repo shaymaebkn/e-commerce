@@ -1,7 +1,7 @@
 <?php
 
 session_start(); 
-if(isset($_SESSION['customerCode']) && isset($_SESSION['email'])) {
+if(isset($_SESSION['password']) && isset($_SESSION['email'])) {
 
 
 ?>
@@ -24,14 +24,14 @@ if(isset($_SESSION['customerCode']) && isset($_SESSION['email'])) {
 </head>
 <body>
 
-    <!-- <h1> Hello : <?php echo $_SESSION['firstName']; ?></h1>
-    <button><a href="logout.php">LOG OUT Here !</a></button> -->
+    
 
     <div class="alert alert-success" id="alertt" role="alert">
-  <h4 class="alert-heading">مرحبا : <?php echo $_SESSION['firstName']; ?></h4>
-  <p> تم تسجيل دخولك بنجاح</p>
+  <h4 class="alert-heading">Welcome  : <?php echo $_SESSION['firstName'];?></h4>
+  <p> You are logged in successfully</p>
   <hr>
-  <button class="btn btn-danger btn-lg"><a href="logout.php" class="text-light" >LOGOUT</a></button>
+  <button class="btn btn-primary btn-lg"><a href="../cart.php"  class="text-light"  >Voir le Panier</a></button>
+  <button class="btn btn-danger btn-lg"><a href="logout.php" class="text-light" >Log Out</a></button>
 </div>
     
 </body>
