@@ -34,7 +34,7 @@
                         <tr>
                             <td><?php echo $row['productName']; ?></td>
                             <td><?php echo $row['unitPrice']; ?></td>
-                            <td><form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST"><input type="number" name="quantity" min="1" value="<?php echo $row['orderedQuantity']; ?>"></td>
+                            <td><?php echo $row['orderedQuantity'] ?></td>
                             <td><?php echo $row['orderedQuantity'] * $row['unitPrice']; ?></td>
                             <td><?php echo '<a class="delete">X</a>';?></td>
                         </tr>
@@ -51,7 +51,7 @@
                 </table>
             </div>
             <div class="next">
-                <button class="next_button" type="submit">Next</button></form>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST"><button class="next_button" type="submit">Next</button></form>
                 <?php
                     $quantity = $_POST['quantity'];
                     $sql = "UPDATE orderDetails SET orderedQuantity='$quantity' WHERE orderID='1' AND productID='3';";
