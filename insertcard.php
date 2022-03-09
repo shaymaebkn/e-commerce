@@ -1,14 +1,20 @@
 <?php 
-//  include_once 'connect/connect.php';
- 
-//  if(isset($_POST['add'])){
+include'connect/connect.php';
 
-//     $quantity = $_POST['quantity'];
-//     $id = $_GET['id'];
+if(isset($_POST['add'])){
+     
+    include_once 'login/connect.php';
+    $sql="SELECT * FROM `customers` WHERE customerCode= ?;";
+    $result=mysqli_query($con,$sql);
 
-//     $statement = $bd->prepare("INSERT INTO `orderdetails`( `productID`, `orderedQuantity`) VALUES (?,?);");
-//     $result = $statement->execute([$id,$quantity]);
-//  }
+    $customercode = $_GET['customerCode'] ;
+    $quantity = $_POST['quantity'];
+    $deliveryAddress= $_GET['adress'];
+    $id = $_GET['id'];
+
+    $statement = $bd->prepare("INSERT INTO `orders`(`customerCode`, `deliveryAddress`) VALUES (?,?,?);");
+    $result = $statement->execute([$customercode, $deliveryAddress]);
+ }
 ?>
 <!-- //  if ($result === TRUE) {
 //      header('Location: index.php?mensaje=registrado');

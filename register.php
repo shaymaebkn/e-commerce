@@ -9,7 +9,6 @@
     $department = $_POST['department'];
     $salary = $_POST['salary'];
     $pic = $_POST['picture'];
-
     $statement = $bd->prepare("INSERT INTO `products`( `productName`, `description`, `unitPrice`, `quantityInStock`, `image`) 
                                VALUES (?,?,?,?,?)");
     $result = $statement->execute([$first_name,$last_name,$department,$salary,$pic]);
