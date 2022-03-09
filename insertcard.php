@@ -4,6 +4,7 @@ if(isset($_POST['add'])){
      
     include_once 'connect/connect.php';
    
+    $id=$_POST['id'];
 
     $customerCode = $_POST['customerCode'] ;
     $deliveryAddress= $_POST['adress'];
@@ -13,13 +14,13 @@ if(isset($_POST['add'])){
     $result = $statement->execute([$customercode, $deliveryAddress]);
 
 
- if ($result === TRUE) {      
-     header('Location: add.php?mensaje=registrado'); 
-     }
-      else {
-     header('Location: add.php?mensaje=error');
-     exit();  
-    }
+//  if ($result === TRUE) {      
+//      header('Location: add.php?mensaje=registrado'); 
+//      }
+//       else {
+//      header('Location: add.php?mensaje=error');
+//      exit();  
+//     }
 
  }
 ?>
