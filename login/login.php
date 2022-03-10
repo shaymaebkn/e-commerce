@@ -23,8 +23,6 @@
      <?php
     include 'header.php';
     include 'connect.php';
-    
-    
     ?>
     
 <form action="main.php" method="post">
