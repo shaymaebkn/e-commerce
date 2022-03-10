@@ -27,7 +27,7 @@ if(isset($_SESSION['password']) && isset($_SESSION['email'])) {
     
 
     <div class="alert alert-success" id="alertt" role="alert">
-  <h4 class="alert-heading">Welcome  : <?php echo $_SESSION['firstName'];?></h4>
+  <h4 class="alert-heading">Welcome  : <?php echo $_SESSION['firstName']; echo " ";echo $_SESSION['lastName'];?></h4>
   <p> You are logged in successfully</p>
   <hr>
   <button class="btn btn-primary btn-lg"><a href="../cart.php"  class="text-light"  >Voir le Panier</a></button>

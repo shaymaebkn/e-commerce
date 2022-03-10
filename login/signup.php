@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 
     <style>
@@ -25,6 +27,8 @@
     <?php
     require_once('connect.php');
     include ('header.php');
+    $message = "your email is already registed !";
+    
 ?>
 <?php
     if(isset($_POST['signUP'])){
@@ -34,26 +38,41 @@
       $phone = $_POST['phone'];
       $email = $_POST['email'];
       $password = $_POST['password'];
+
+      $query=mysqli_query($con,"SELECT * FROM `customers` WHERE email='$email'");
+
+      if(mysqli_num_rows($query)>0){
+        echo "<script type='text/javascript'>alert('$message');</script>";
+      
+      
+  }else{
+
   
        $sql="INSERT INTO `customers`(`firstName`, `lastName`, `adress`, `phone`, `email`, `password`) 
        VALUES ('$firstname','$lastname','$adress','$phone','$email','$password')";
       
        $result = mysqli_query($con,$sql);
 
-      //  $result = $bd -> query("INSERT INTO `customers`(`firstName`, `lastName`, `adress`, `phone`, `email`, `password`) VALUES ('$firstname','$lastname','$adress','$phone','$email','$password')");
-      // $sql = $result->fetchAll(PDO::FETCH_OBJ);
-
        if($result){
-         echo "<h1 id='rg'>your registration is successful</h1>";
-       }else{
-         echo 'your registration is "NOT" successful';
-       }}
+        
+        
+        echo "<script type='text/javascript'>
+            Swal.fire('your registration is successful');
+              </script>";
+        
+      }else{
+        echo "<h1 id='rg'>your registration is NOT successful</h1>"; 
+      }
+        }
+      }
+
   
     ?>
     
 
     <div class="text-center">
     <h1 class="m-5">SIGN UP</h1></div>
+    
 
 <form action="signup.php" method="post" class="container">
 <div class="row mb-3">
@@ -91,10 +110,10 @@
     <input type="password" class="form-control" name="password" required>
   </div>
 
-    <div class="col">
+    <!-- <div class="col">
     <label for="password" class="form-label">Confirm password</label>
     <input type="password" class="form-control" name="password" required>
-    </div>
+    </div> -->
     </div>
 
 
@@ -104,17 +123,10 @@
   <p class="mt-2 mb-5">You have an account already? <a href="login.php" class="text-primary">Log in</a></p>
 </div>
 </form>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script type="text/javascript">
-  $(function(){
-  $('#register').click(function(){
-    Swal.fire('your registration is successful');
 
-  });
-});
 
-</script> -->
+
+</script>
 <?php
     include 'footer.php';
     ?>
