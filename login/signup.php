@@ -57,7 +57,12 @@
         
         
         echo "<script type='text/javascript'>
-            Swal.fire('your registration is successful');
+        Swal.fire(
+          'Your registration is successful!',
+          '',
+          'success',
+        )
+           
               </script>";
         
       }else{
