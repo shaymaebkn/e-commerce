@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>PaOn cosmetic</title>
 </head>
+<style><?php include 'style.css'; ?></style>
 <body>
     <header>
         <nav class="nav1">
