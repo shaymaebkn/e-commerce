@@ -105,7 +105,7 @@
                 </table>
             </div>
             <div class="next">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST"><button class="next_button" type="submit">Next</button></form>
+                <form action="cart_details.php" method="POST"><button class="next_button" type="submit">Next</button></form>
                 <?php
                     $quantity = $_POST['quantity'];
                     $sql = "UPDATE orderDetails SET orderedQuantity='$quantity' WHERE orderID='1' AND productID='3';";
