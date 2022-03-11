@@ -1,10 +1,13 @@
-let section = document.getElementById('section1');
-let next = document.getElementById('next_button');
+<?php include 'headerfooter/header.php'; ?>
+<style><?php include 'cart_style.css'; ?></style>
 
-document.getElementsByName('test').addEventListener
-
-next.addEventListener('click', function(){
-    section.innerHTML = `
+<main>
+    <section class="section1" id="section1">
+        <div class="cart_list">
+            <li>Cart</li>
+            <li>Details</li>
+            <li>Confirmation</li>
+        </div>
         <div class="cart_list">
             <li>Cart</li>
             <li>Details</li>
@@ -20,5 +23,7 @@ next.addEventListener('click', function(){
                 <p></p>
             </div>
         </div>
-    `;
-});
+    </section>
+
+</main>
+<?php include 'headerfooter/footer.php'; ?>
