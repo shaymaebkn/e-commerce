@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include 'headerfooter/header.php';
 ?>
 <?php
@@ -20,8 +21,7 @@
 
 
     ?>
-<?php 
-    session_start(); 
+<?php  
     if(isset($_SESSION['email'])) {
     $statement = $bd->prepare("SELECT * FROM `customers` WHERE  customerCode = '?'");
     $customers = $statement->fetchAll(PDO::FETCH_OBJ);
