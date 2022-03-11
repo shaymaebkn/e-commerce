@@ -127,6 +127,7 @@ footer div{
                 <ul>
                     <li><a href="#">sign-up</a></li>
                     <li><a href="#">catalogue</a></li>
+                    <li><a href="form.php"> add products</a></li>
                 </ul>
 
             </div>

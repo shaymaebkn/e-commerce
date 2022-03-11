@@ -10,49 +10,7 @@
 
   <div class="container mt-7">
       <div class="row justify-content-center">
-          <div class="col-md-7">
-              <div class="card-header">
-                  lista de personas 
-                  <table class="table align-middle">
-                      <thead>
-                          <tr>
-                            <th scope="col"></th>
-                            <th scope="col">productName</th>
-                            <th scope="col">description</th>
-                            <!-- <th scope="col">Date </th> -->
-                            <th scope="col">unitPrice</th>
-                            <th scope="col">quantityInStock</th>
-                            <!-- <th scope="col">Function</th> -->
-
-                            <th scope="col "colspane="2">image</th>
-                            <!-- <th scope="col">operations</th> -->
-                            
-                          </tr>
-                      </thead>
-                      <tbody>
-                      <?php 
-                                foreach($product as $data){ 
-                    ?>
-                          <tr>
-                              <td scope="row"><?php echo $data->productID; ?></td>
-                              <td><?php echo $data->productName; ?></td>
-                              <td><?php echo $data->description; ?></td>
-                              <td><?php echo $data->unitPrice; ?></td>
-                              <td><?php echo $data->quantityInStock; ?></td>
-                              <td>
-                 
-                              <img src="<?php echo $data->image; ?>" alt="" width="35px" height="35px" style = "border-radius:50% ;"></td>
-                           
-                          <?php 
-                                }
-                            ?>
-                      </tbody>
-                  </table>
-
-              </div>
-
-          </div>
-        <div class="col-md-7">
+           <div class="col-md-7">
             <div class="card">
                 <div class="card-header">
                   enter data
@@ -116,6 +74,49 @@
             </div>
 
         </div>
+          <div class="col-md-7">
+              <div class="card-header">
+                  lista de personas 
+                  <table class="table align-middle">
+                      <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">productName</th>
+                            <th scope="col">description</th>
+                            <!-- <th scope="col">Date </th> -->
+                            <th scope="col">unitPrice</th>
+                            <th scope="col">quantityInStock</th>
+                            <!-- <th scope="col">Function</th> -->
+
+                            <th scope="col "colspane="2">image</th>
+                            <!-- <th scope="col">operations</th> -->
+                            
+                          </tr>
+                      </thead>
+                      <tbody>
+                      <?php 
+                                foreach($product as $data){ 
+                    ?>
+                          <tr>
+                              <td scope="row"><?php echo $data->productID; ?></td>
+                              <td><?php echo $data->productName; ?></td>
+                              <td><?php echo $data->description; ?></td>
+                              <td><?php echo $data->unitPrice; ?></td>
+                              <td><?php echo $data->quantityInStock; ?></td>
+                              <td>
+                 
+                              <img src="<?php echo $data->image; ?>" alt="" width="35px" height="35px" style = "border-radius:50% ;"></td>
+                           
+                          <?php 
+                                }
+                            ?>
+                      </tbody>
+                  </table>
+
+              </div>
+
+          </div>
+       
 
     </div>
 

@@ -79,7 +79,7 @@
     
 
 <form action="signup.php" method="post" class="container">
-<div class="container" style="border: 2px solid #000000; border-radius: 10px; height: 45em; width: 82em;">
+<!-- <div class="container" style="border: 2px solid #000000; border-radius: 10px; height: 45em; width: 82em;"> -->
 <h1 class="m-5 text-center">SIGN UP</h1>
 <div class="row mb-3">
   <div class="col">
@@ -128,7 +128,7 @@
   <button type="submit" name="signUP" id="register" style="background-color:#FFB3C6;" class="mt-5 btn-lg">SIGN UP</button>
   <p class="mt-2 mb-5">You have an account already? <a href="login.php" class="text-primary">Log in</a></p>
 </div>
-</div>
+<!-- </div> -->
 </form>
 
 
