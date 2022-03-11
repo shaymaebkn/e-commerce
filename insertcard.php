@@ -12,17 +12,17 @@ if(isset($_POST['add'])){
     
     $statement = $bd->prepare("INSERT INTO `orders`(`customerCode`, `deliveryAddress`) VALUES (?,?);");
     $result = $statement->execute([$customerCode, $deliveryAddress]);
-//  if ($result === TRUE) {      
-//      header('Location: cart.php?mensaje=registrado'); 
-//      }
-//       else {
-//      header('Location: add.php?mensaje=error');
-//      exit();  
-//     }
+
 
   $statements = $bd->prepare("INSERT INTO `orderdetails`( `productID`, `orderedQuantity`) VALUES (?,?);");
   $results = $statements->execute([$id, $quantity]);
-
+ if ($result === TRUE && $results === TRUE) {      
+     header('Location: add.php?mensaje=registrado'); 
+     }
+      else {
+     header('Location: index.php?mensaje=error');
+     exit();  
+    }
  }
 ?>
 
