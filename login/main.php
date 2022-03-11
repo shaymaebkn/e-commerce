@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include 'connect.php';
 
 
@@ -36,6 +36,10 @@ include 'connect.php';
          $row=mysqli_fetch_assoc($result);
 
          if($row['email']===$email && $row['password']===$password){
+          session_start();
+          if(empty($_SESSION['cart'])){
+            $_SESSION['cart'] = [];
+          }
 
          $_SESSION['email']=$row['email'];
          $_SESSION['password']=$row['password'];

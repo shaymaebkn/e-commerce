@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'headerfooter/header.php';
 ?>
 <style><?php include 'cart_style.css'; ?></style>
