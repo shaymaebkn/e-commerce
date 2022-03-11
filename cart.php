@@ -2,6 +2,20 @@
     include 'headerfooter/header.php';
 ?>
 <style><?php include 'cart_style.css'; ?></style>
+<!-- <?php 
+    // if(session_status() === PHP_SESSION_NONE){
+    //     echo "<script>
+    //             let nav2 = document.getElementById('nav2');
+    //             nav2.innerHTML = '<p>You have to <a href="."login/signup.php".">SIGN-UP</a> or <a href="."login/login.php".">LOGIN</a> to make a purchase</p>'
+    //         </script>";
+    // }
+    // else{
+    //     "<script>
+    //             let nav2 = document.getElementById('nav2');
+    //             nav2.innerHTML = '<p>You have to <a href="."login/signup.php".">SIGN-UP</a> or <a href="."login/login.php".">LOGIN</a> to make a purchase</p>'
+    //         </script>";
+    // }
+?> -->
 <main>
     <section class="section1">
             <div class="cart_list">
