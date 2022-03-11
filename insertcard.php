@@ -1,8 +1,8 @@
 <?php 
-
+ include_once 'connect/myconnect.php';
 
 if(isset($_POST['add'])){
-    include_once 'connect/connect.php';
+   
    
     $quantity = $_POST['quantity'];
     $id=$_POST['id'];
