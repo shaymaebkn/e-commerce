@@ -17,7 +17,7 @@ if(isset($_POST['add'])){
   $statements = $bd->prepare("INSERT INTO `orderdetails`( `productID`, `orderedQuantity`) VALUES (?,?);");
   $results = $statements->execute([$id, $quantity]);
  if ($result === TRUE && $results === TRUE) {      
-     header('Location: add.php?mensaje=registrado'); 
+     header('Location: index.php?mensaje=registrado'); 
      }
       else {
      header('Location: index.php?mensaje=error');
