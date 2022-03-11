@@ -12,7 +12,6 @@ if(isset($_POST['add'])){
   if(isset($_POST['add'])){
     include_once 'connect/connect.php';
     
->>>>>>> b95bbe8a021dcf2d4adab76841fff058327d63bc
     $quantity = $_POST['quantity'];
     $id=$_POST['id'];
     $customerCode = $_POST['customerCode'] ;
