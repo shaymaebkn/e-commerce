@@ -39,6 +39,8 @@ include 'connect.php';
 
          $_SESSION['email']=$row['email'];
          $_SESSION['password']=$row['password'];
+         $_SESSION['adress']=$row['adress'];
+         $_SESSION['phone']=$row['phone'];
         //  $_SESSION['customerCode']=$row['customerCode'];
         $_SESSION['lastName']=$row['lastName'];
          $_SESSION['firstName']=$row['firstName'];
