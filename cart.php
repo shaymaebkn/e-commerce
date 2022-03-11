@@ -18,7 +18,7 @@
     // }
 ?> -->
 <main>
-    <section class="section1">
+    <section class="section1" id="section1">
             <div class="cart_list">
                     <li>Cart</li>
                     <li>Details</li>
