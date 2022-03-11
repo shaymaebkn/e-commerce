@@ -29,13 +29,14 @@
 
     $statements = $bd->prepare("INSERT INTO `orderdetails`( `productID`, `orderedQuantity`) VALUES (?,?);");
     $results = $statements->execute([$id, $quantity]);
-    if ($result === TRUE && $results === TRUE) {      
-      header('Location: index.php?mensaje=registrado'); 
-    }
-    else {
-      header('Location: index.php?mensaje=error');
-      exit();  
-    }
+    // if ($result === TRUE && $results === TRUE) {      
+    //   header('Location: index.php?mensaje=registrado'); 
+    // }
+    // else {
+    //   header('Location: index.php?mensaje=error');
+    //   exit();  
+    // }
+    header("Location: add.php?id=$id");
   }
 ?>
 
