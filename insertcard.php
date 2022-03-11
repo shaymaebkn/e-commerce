@@ -4,8 +4,6 @@
 
 if(isset($_POST['add'])){
   session_start();
-
-  if(isset($_POST['add'])){
     include_once 'connect/connect.php';
     
     $quantity = $_POST['quantity'];
@@ -43,4 +41,3 @@ if(isset($_POST['add'])){
     header("Location: add.php?id=$id");
   }
 ?>
-
