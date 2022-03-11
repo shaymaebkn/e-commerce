@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!-- bootstrap -->
     <link rel="stylesheet" href="../cart_style.css">
     <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+    <title>PaOn cosmetic</title>
 </head>
 <body>
     <header>
@@ -29,7 +29,7 @@
             </div>
             <div class="icons" mt-2>
                 <a href="#"><img src="../pics/search.png"></a>
-                <a href="cart.php"><img src="../pics/cart.png"></a>
+                <a href="../cart.php"><img src="../pics/cart.png"></a>
                 <a href="profile.php"><img src="../pics/profil-de-lutilisateur.png"></a>
             </div>
         </nav>
