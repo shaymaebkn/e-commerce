@@ -36,7 +36,7 @@
                         <div style="width: 20rem;" >
                         <input type="hidden" name="id" value="<?php echo $data->productID; ?>">
                         <input type="hidden" name="adress" value="">
-                        <input type="hidden" name="customerCode" value="<?php echo $_SESSION['customerCode']; ?>" >
+                        <!-- <input type="hidden" name="customerCode" value="<?php echo $_SESSION['customerCode']; ?>" > -->
                         <img src="<?php echo $data->image; ?>" class="card-img-top" alt="...">
                         </div>
 

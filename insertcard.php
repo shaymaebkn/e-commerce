@@ -11,19 +11,21 @@ if(isset($_POST['add'])){
     $customerCode = $_POST['customerCode'] ;
     $deliveryAddress= $_POST['adress'];
 
-    // if(!empty($_SESSION['cart'])){
-    //   while($_SESSION['cart']){
-    //     if($id == $_SESSION['cart'][0]){
-    //       $exist = true;
-    //       break;
-    //     }
-    //     else{
-    //       $exist = false;
-    //     }
-    //   }
-    // }
-
-    array_push($_SESSION['cart'], array($id,$quantity));
+    for($i=0; $i<=count($_SESSION['cart']); $i++){
+      if($id == $_SESSION['cart'][$i][0]){
+        $exist = true;
+        break;
+      }
+      else{
+        $exist = false;
+      }
+    }
+    if($exist == true){
+      $_SESSION['cart'][$i][1] += $quantity;
+    }
+    else{
+      array_push($_SESSION['cart'], array($id,$quantity));
+    }
       
     // $statement = $bd->prepare("INSERT INTO `orders`(`customerCode`, `deliveryAddress`) VALUES (?,?);");
     // $result = $statement->execute([$customerCode, $deliveryAddress]);

@@ -35,7 +35,7 @@
                         <th>QTE</th>
                         <th>Total</th>
                     </thead>
-                    <tbody>
+                    <!-- <tbody>
                         <?php 
                             include 'connect/myconnect.php';
                             $sql = "SELECT orderdetails.orderID, orderdetails.productID, orderdetails.orderedQuantity, products.productName, products.unitPrice FROM orderdetails INNER JOIN products ON orderdetails.productID=products.productID WHERE orderID='2';";
@@ -65,7 +65,43 @@
                                 echo '<td colspan="5" align="center">You have no products in your shopping cart</td>';
                             }
                         ?>
+                    </tbody> -->
+                    <tbody>
+                        <?php
+                            include 'connect/myconnect.php';
+                            $total = 0;
+                            for($i=0; $i<count($_SESSION['cart']); $i++){
+                                $productID = $_SESSION['cart'][$i][0];
+                                $sql = "SELECT * FROM products WHERE productID='$productID';";
+                                $result = mysqli_query($connect, $sql);
+                                $resultCheck = mysqli_num_rows($result);
+                                if ($resultCheck > 0){
+                                    $row = mysqli_fetch_assoc($result);
+                                }
+
+                        ?>
+                        <tr>
+                            <td><?php echo $_SESSION['cart'][$i][0]; ?></td>
+                            <td><?php echo $row['unitPrice']; ?></td>
+                            <td><?php echo $_SESSION['cart'][$i][1]; ?></td>
+                            <td><?php echo $row['unitPrice'] * $_SESSION['cart'][$i][1]; ?></td>
+                        </tr>
+                        <?php
+                            $total += $row['unitPrice'] * $_SESSION['cart'][$i][1];
+                            }
+                        ?>
                     </tbody>
+                    <tfoot>
+                        <?php 
+                            if(empty($_SESSION['cart'])){
+                                echo '<td colspan="5" align="center">You have no products in your shopping cart</td>';
+                            }
+                            else{
+                                echo '<td colspan="3" align="center">Subtotal before delevry charges</td>';
+                                echo '<td>'. $total .'</td>';
+                            }
+                        ?>
+                    </tfoot>
                 </table>
             </div>
             <div class="next">

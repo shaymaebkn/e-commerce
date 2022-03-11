@@ -37,9 +37,11 @@ include 'connect.php';
 
          if($row['email']===$email && $row['password']===$password){
           session_start();
+          session_unset();
           if(empty($_SESSION['cart'])){
             $_SESSION['cart'] = [];
           }
+          $_SESSION['order']
 
          $_SESSION['email']=$row['email'];
          $_SESSION['password']=$row['password'];
