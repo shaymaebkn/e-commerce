@@ -52,3 +52,32 @@ main{
     cursor: pointer;
     color: red;
 }
+#container{
+    border: 1px solid black;
+    padding: 25px 100px;
+}
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+}
+.shipping{
+    display: flex;
+    justify-content: space-between;
+}
+.total{
+    border-top: 1px solid black;
+    padding-top: 25px;
+}
+.confirm{
+    display: flex;
+    justify-content: center;
+}
+.confirm_button{
+    padding: 10px 40px;
+    background-color: #DAB598;
+    border: none;
+    border-radius: 6px;
+}
+.error{
+    color: red;
+}

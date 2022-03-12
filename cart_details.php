@@ -23,6 +23,7 @@
                 <div class="deliver_adress">
                     <input type="radio" name="adress" checked><label>Adress</label><br>
                     <input type="text" name="deliver_adress" placeholder="Adress">
+                    <span class="error">*</span>
                 </div>
             </div>
         </div>
