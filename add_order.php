@@ -4,6 +4,7 @@
     $orderDate = date("Y-m-d");
     $deliveryAddress = $_SESSION['adress'];
 
+
     $sql = "INSERT INTO orders (customerCode, orderDate, deliveryAddress) VALUES ('$customerCode', '$orderDate', '$deliveryAddress';)";
     mysqli_query($connect, $sql);
 
