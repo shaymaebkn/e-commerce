@@ -69,7 +69,7 @@
                     <tbody>
                         <?php
                             include 'connect/myconnect.php';
-                            $total = 0;
+                            $_SESSION['total'] = 0;
                             for($i=0; $i<count($_SESSION['cart']); $i++){
                                 $productID = $_SESSION['cart'][$i][0];
                                 $sql = "SELECT * FROM products WHERE productID='$productID';";
@@ -87,7 +87,7 @@
                             <td><?php echo $row['unitPrice'] * $_SESSION['cart'][$i][1]; ?></td>
                         </tr>
                         <?php
-                            $total += $row['unitPrice'] * $_SESSION['cart'][$i][1];
+                            $_SESSION['total'] += $row['unitPrice'] * $_SESSION['cart'][$i][1];
                             }
                         ?>
                     </tbody>
@@ -98,7 +98,7 @@
                             }
                             else{
                                 echo '<td colspan="3" align="center">Subtotal before delevry charges</td>';
-                                echo '<td>'. $total .'</td>';
+                                echo '<td>'. $_SESSION['total'] .'</td>';
                             }
                         ?>
                     </tfoot>

@@ -19,7 +19,7 @@
             </div>
             <div class="ship_to">
                 <h4>ship to</h4>
-                <form action="cart_details.php" method="POST">
+                <form action="cart_confirmation.php" method="POST">
                 <div class="deliver_adress">
                     <input type="radio" name="adress" checked><label>Adress</label><br>
                     <input type="text" name="deliver_adress" placeholder="Adress">

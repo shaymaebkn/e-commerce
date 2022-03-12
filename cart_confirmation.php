@@ -1,13 +1,13 @@
 <?php include 'headerfooter/header.php'; ?>
-<style><?php include 'cart_style.css'; ?></style>
+<style>
+    <?php 
+        include 'cart_style.css';
+        $items = count($_SESSION['cart']);
+    ?>
+</style>
 
 <main>
     <section class="section1" id="section1">
-        <div class="cart_list">
-            <li>Cart</li>
-            <li>Details</li>
-            <li>Confirmation</li>
-        </div>
         <div class="cart_list">
             <li>Cart</li>
             <li>Details</li>
@@ -19,8 +19,8 @@
         <div class="container">
             <div class="subtotal">
                 <p>Subtotal</p>
-                <p></p>
-                <p></p>
+                <p><?php echo $items; ?></p>
+                <p><?php echo $_SESSION['total']; ?></p>
             </div>
         </div>
     </section>
