@@ -108,7 +108,7 @@ include 'headerfooter/header.php';
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         function myFunction() {
-            swal("oops!", "WE ARE SORRY THIS PRODUCT IS OUT OF STOCK YOU CANNOT ADD IT TO YOUR ORDER ", "error");
+            swal("oops!", "SORRY THIS PRODUCT IS OUT OF STOCK YOU CANNOT ADD IT TO YOUR ORDER ", "error");
 
 }
         
