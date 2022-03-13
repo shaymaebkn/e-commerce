@@ -35,12 +35,12 @@
         </nav>
         <nav class="nav2" id="nav2">
             <ul>
-                <li><a href="#">skin care</a></li>
-                <li><a href="#">make-up</a></li>
-                <li><a href="#">perfume</a></li>
-                <li><a href="#">bath and body</a></li>
-                <li><a href="#">hair</a></li>
-                <li><a href="#">accessories</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
             </ul>
         </nav>
     </header>
