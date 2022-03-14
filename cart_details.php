@@ -4,8 +4,8 @@
 <main>
     <section class="section1" id="section1">
         <div class="cart_list">
-            <li>Cart</li>
-            <li>Details</li>
+            <li style="background-color: #E6DDD6;">Cart</li>
+            <li style="background-color: #E6DDD6;">Details</li>
             <li>Confirmation</li>
         </div>
         <div class="cart_title">
