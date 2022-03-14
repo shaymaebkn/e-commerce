@@ -2,7 +2,7 @@
     session_start();
     include 'connect/myconnect.php';
     $customerCode = $_SESSION['customerCode'];
-    $orderDate = date("Y-m-d");
+    $orderDate = date("Y-m-d h:i:sa");
     $deliveryAddress = $_SESSION['adress'];
 
 
