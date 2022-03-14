@@ -23,5 +23,5 @@
         mysqli_query($connect, $sql3);
     }
     session_unset();
-    header("Location : confirmed_order.php");
+    header("Location: confirmed_order.php");
 ?>
