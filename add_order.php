@@ -19,11 +19,9 @@
     for($i=0; $i<count($_SESSION['cart']); $i++){
         $productID = $_SESSION['cart'][$i][0];
         $orderedQuantity = $_SESSION['cart'][$i][1];
-        $sql3 = "INSERT INTO orderDetails (orderID, productID, orderedQuantity) VALUES
-         ('$orderID', '$productID', '$orderedQuantity');";
+        $sql3 = "INSERT INTO orderDetails (orderID, productID, orderedQuantity) VALUES ('$orderID', '$productID', '$orderedQuantity');";
         mysqli_query($connect, $sql3);
     }
-    session_unset();
-
-    header("Location:confirmed_order.php");
+    $_SESSION['cart'] = [];
+    header("Location: confirmed_order.php");
 ?>
