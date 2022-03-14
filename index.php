@@ -7,6 +7,11 @@ include 'headerfooter/header.php';
     $statement = $bd -> query("SELECT * FROM `products`");
     $product = $statement->fetchAll(PDO::FETCH_OBJ);
     ?>
+    <style>
+        body{
+            font-family: 'Gotu', sans-serif;
+        }
+    </style>
     <div class="container ">
         <section>
        

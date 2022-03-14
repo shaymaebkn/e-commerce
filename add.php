@@ -53,10 +53,10 @@
                         <div style="margin-top: 50px;">
                         <h4 class="" ><?php echo $data->productName; ?></h4>   
                         <h6 class=""><?php echo number_format($data->unitPrice); ?>DH</h6>
-                        <p class="">description <?php echo $data->description; ?></p>
-                        <input class="p-3" type="number" id="input" name="quantity" value="1" min="1" max="<?php echo $quantity; ?>"><br>
+                        <p class="">description : <?php echo $data->description; ?></p>
+                        <input class="p-3" type="number" id="input" name="quantity" value="1" min="1" max="<?php echo $quantity; ?>" required><br>
                         <br>
-                            <input type="submit" name="add" class="btn btn-primary" value="add to card">
+                            <input type="submit" name="add"  class="btn btn-primary" value="add to card">
                         </div>  
                     </form> 
             </div>

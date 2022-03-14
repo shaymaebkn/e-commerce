@@ -16,7 +16,7 @@
         <div class="cart_title">
             <h1>Confirmation :</h1>
         </div>
-        <div id="container">
+        <div id="container" class="p-7">
             <div class="subtotal">
                 <p>Subtotal</p>
                 <p><?php echo "(". $items. " items)"; ?></p>
