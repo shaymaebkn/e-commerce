@@ -27,7 +27,11 @@
                 </div>
             </div>
         </div>
-        <button class="next_button">Next</button></form>
+        <div class="text-center">
+        <button class="next_button">Next</button>
+        </div>
+
+    </form>
     </section>
 </main>
 

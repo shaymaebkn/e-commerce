@@ -11,9 +11,9 @@
         background-size: cover;
       }
       .error{
-          color:red;
+          color:black;
           font-size:25px;
-          background:yellow;
+          /* background:yellow; */
             
       }
       </style>
@@ -35,10 +35,7 @@
 <div class="container" >
 
 <div class="mb-3 row">
-    <?php if(isset($_GET['error'])) { ?>
-
-     <p class="error"><?php echo $_GET['error']?></p>
-     <?php } ?>
+  
   
     
 <label for="email" class="form-label">Email :</label>
@@ -53,6 +50,10 @@
 
 </div>
 
+  <?php if(isset($_GET['error'])) { ?>
+
+     <p class="error text-center" ><?php echo $_GET['error']?></p>
+     <?php } ?>
 
 <div class="text-center">
 <button type="submit" name="login" style="background-color:#FFB3C6;" class="mt-5 btn-lg">LOGIN</button>

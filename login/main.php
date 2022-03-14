@@ -58,7 +58,7 @@ include 'connect.php';
 
       }
       else{
-          header("location:login.php?error=ERROR in email or password");
+          header("location:login.php?error= your email or password is not valid");
         }
       }
 
