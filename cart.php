@@ -78,7 +78,6 @@
                                 if ($resultCheck > 0){
                                     $row = mysqli_fetch_assoc($result);
                                 }
-
                         ?>
                         <tr>
                             <td><?php echo $_SESSION['cart'][$i][0]; ?></td>
@@ -89,7 +88,7 @@
                         </tr>
                         <?php
                             $_SESSION['total'] += $row['unitPrice'] * $_SESSION['cart'][$i][1];
-                            }
+                        }
                         ?>
                     </tbody>
                     <tfoot>
