@@ -69,12 +69,9 @@ if(isset($_SESSION['password']) && isset($_SESSION['email'])) {
         </nav>
         <nav class="nav2" id="nav2" style="background-color: white;">
             <ul>
-                <li><a href="#">skin care</a></li>
-                <li><a href="#">make-up</a></li>
-                <li><a href="#">perfume</a></li>
-                <li><a href="#">bath and body</a></li>
-                <li><a href="#">hair</a></li>
-                <li><a href="#">accessories</a></li>
+                <li><a href="#"></a>Welcome to your profile <?php echo $_SESSION['firstName'];?> </li>
+               
+                
             </ul>
         </nav>
     </header>    

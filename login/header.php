@@ -33,7 +33,7 @@
                 <a href="profile.php"><img src="../pics/profil-de-lutilisateur.png"></a>
             </div>
         </nav>
-        <nav class="nav2" id="nav2">
+        <nav class="nav2" id="nav2" style="background-color: white;">
             <ul>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
