@@ -21,6 +21,18 @@
         $orderedQuantity = $_SESSION['cart'][$i][1];
         $sql3 = "INSERT INTO orderDetails (orderID, productID, orderedQuantity) VALUES ('$orderID', '$productID', '$orderedQuantity');";
         mysqli_query($connect, $sql3);
+
+        $sql5 = "SELECT quantityInStock FROM products WHERE productID='$productID'";
+        $result5 = mysqli_query($connect, $sql5);
+        $resultCheck = mysqli_num_rows($result5);
+        if($resultCheck > 0){
+            $row = mysqli_fetch_assoc($result5);
+        }
+        $quantityInStock = $row['quantityInStock'];
+        $quantityMins1 = $quantityInStock - $orderedQuantity;
+        echo $quantityMins1 . " " . $productID;
+        $sql4 = "UPDATE products SET quantityInStock = $quantityMins1 WHERE productID='$productID'";
+        mysqli_query($connect, $sql4);
     }
     $_SESSION['cart'] = [];
     header("Location: confirmed_order.php");

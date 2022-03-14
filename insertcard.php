@@ -39,6 +39,6 @@ if(isset($_POST['add'])){
     //   header('Location: index.php?mensaje=error');
     //   exit();  
     // }
-    header("Location: add.php?id=$id");
+    header("Location: index.php");
   }
 ?>
