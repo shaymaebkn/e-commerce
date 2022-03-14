@@ -85,6 +85,7 @@
                             <td><?php echo $row['unitPrice']; ?></td>
                             <td><?php echo $_SESSION['cart'][$i][1]; ?></td>
                             <td><?php echo $row['unitPrice'] * $_SESSION['cart'][$i][1]; ?></td>
+                            <td><?php echo '<a class="delete" href="deletOrder.php?orderID='.$row['orderID'].'&productID='.$row['productID'].'">X</a>';?></td>
                         </tr>
                         <?php
                             $_SESSION['total'] += $row['unitPrice'] * $_SESSION['cart'][$i][1];

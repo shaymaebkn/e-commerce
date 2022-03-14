@@ -79,7 +79,7 @@ if(isset($_SESSION['password']) && isset($_SESSION['email'])) {
         </nav>
     </header>    
     <body>    
-    <form action="main.php"   method="post">
+    <form action="logout.php" method="post">
     <div class="container" style="border: 2px solid #000000; border-radius: 10px; height: 30em; width: 72em;">
             <br>
             <h1 class="text-center">Profile</h1>
